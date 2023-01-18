@@ -15,7 +15,7 @@
             
         }else{
             
-            echo "Usuario no identificado";
+            header("Location: https://localhost/PPS/ProyectoAlvaro/examen11/pagina1.php");
         }
 
    }else{
