@@ -3,13 +3,13 @@
 
  $usuario = $_POST['usuario'];
  $clave = $_POST["clave"];
+ $tamClave = strlen($clave);
 
-   
-  if( ((strlen($clave)) > 4 && (strlen($clave)) < 16) ){
+  if( ($tamClave > 4) && ($tamClave < 16) ){
        
         echo "Tamaño de clave correcto <br>";
         
-        if( ($_POST['usuario'] == "usuario11") && ($_POST['clave'] == "password11") ){
+        if( ($usuario == "usuario11") && ($clave == "password11") ){
             
             echo "Usuario identificado como: ". $usuario ;
             
@@ -19,8 +19,8 @@
         }
 
    }else{
-   
-       echo "La clave debe tener entre 5 y 15 caracteres";   
+         
+       header("Location: https://localhost/PPS/ProyectoAlvaro/examen11/pagina1.php");
      
    }
    
