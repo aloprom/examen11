@@ -1,3 +1,6 @@
+
+<html><link href="estilos.css" rel="stylesheet" type="text/css"></html>
+
 <?php
 
 
@@ -6,21 +9,20 @@
  $tamClave = strlen($clave);
 
   if( ($tamClave > 4) && ($tamClave < 16) ){
-       
-        echo "Tamaño de clave correcto <br>";
-        
+
         if( ($usuario == "usuario11") && ($clave == "password11") ){
             
-            echo "Usuario identificado como: ". $usuario ;
+            echo "Usuario identificado como: ". $usuario . "<br>";
+            echo "Password: " . $clave ;
             
         }else{
             
-            header("Location: https://localhost/PPS/ProyectoAlvaro/examen11/pagina1.php");
+            header("Location: https://localhost/PPS/ProyectoAlvaro/examen11/pagina1.php?error1=true");
         }
 
    }else{
          
-       header("Location: https://localhost/PPS/ProyectoAlvaro/examen11/pagina1.php");
+        header("Location: https://localhost/PPS/ProyectoAlvaro/examen11/pagina1.php?error2=true");
      
    }
    
